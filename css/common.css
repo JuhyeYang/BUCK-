@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100; 300; 400; 500; 700; 900&family=Roboto:ital,wght@0,100; 0,300; 0,400; 0,500; 0,700; 0,900; 1,100; 1,300; 1,400; 1,500; 1,700; 1,900&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300; 0,400; 0,500; 0,600; 0,700; 0,800; 1,300; 1,400; 1,500; 1,600; 1,700; 1,800&display=swap'); /*===========================================================================
+ CSS 초기화
+============================================================================*/
+* { font-family: 'Roboto','Noto Sans KR',sans-serif; box-sizing: border-box; margin: 0; padding: 0; font-weight: 400; } 
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, em, img, strong, b, i, dl, dt, dd, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, menu, nav, section, video, a { border: 0; outline: 0; font-size: 16px; color: #191919; line-height: 1.5; scroll-behavior: smooth; letter-spacing: -0.6px; } 
+body { line-height: 1; } 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } 
+ul, ol, li { list-style: none; } 
+strong { display: inline-block; } 
+a { margin: 0; padding: 0; font-size: 100%; } 
+table { width: 100%; border-collapse: collapse; border-spacing: 0; } 
+table thead { background:#f8f8fa; } 
+table tr { } 
+table th { font-size:18px; font-weight: bold; padding:12px; text-align: center; } 
+table td { padding:12px; text-align: center; } 
+input,
+select { vertical-align: middle; outline: 0; } 
+p { line-height: 1.5; } 
+img { display: block; width: 100%; object-fit: cover; } 
+span { display: inline-block; } 
+label { display: block; font-size: 18px; } 
+button { cursor: pointer; background: #1A274C; color: #fff; font-size:15px; padding:12px 20px; } 
+a { display: block; text-decoration: none; } 
+input[type="text"], input[type="password"], input[type="email"], button, textarea { border: 1px solid #e1e1e1; appearance: none; -moz-appearance: none; -webkit-appearance: none; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; } 
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"] { border:0; border-bottom: 1px solid #e3e3e5; background: inherit; padding:12px 30px 12px 0; } 
+input::placeholder { font-weight: 400; color:#767676; } 
+textarea { resize: none; padding: 14px; font-size: 16px; } 
+.col-group { display: flex; align-items: center; } 
+.btn-group { text-align: center; } 
+.btn-group button { font-size: 14px; font-weight: 400; position: relative; margin: 0 auto; padding: 0; width: 144px; border: 1px solid #d3d3d3; text-align: center; height: 50px; line-height: 50px; } 
+pre { display: inline-block; white-space: pre-wrap; } 
+.wrap { overflow: hidden; } 
+/*===========================================================================
+ 공통요소
+============================================================================*/
+.container { width: 1280px; height: 100%; margin: 0 auto; } 
+.button-group { width: 100%; display: flex; align-items: center; justify-content: center; } 
+
+/*===========================================================================
+ 헤더
+============================================================================*/
+header { position: fixed; top: 0; left: 0; width: 100%;  background: #fff; } 
+header .logo { margin-right: 72px; padding-top: 5px; font-weight: 700; font-size: 24px; line-height: 1.45; } 
+header .container { display: flex; justify-content: space-between; flex-wrap: wrap; } 
+header .top-wrap { padding: 23px 0; display: flex; justify-content: space-between; width: 100%; border-bottom: 1px solid #d4d4d4; } 
+header .top-wrap .left-group { display: flex; } 
+header .input-box { width: 420px; display: flex; align-items: center; } 
+header .input-box input { position: relative; width: 100%; padding-left: 20px; border-radius: 22px; background: #F1F1F5; font-weight: 400; font-size: 15px; line-height: 1.46; letter-spacing: -0.0025em; } 
+header .input-box input::after { content: ''; position: absolute; background: url(../img/icon-search.svg)no-repeat center / 100% auto; width: 20px; height: 18px; border: 1px solid #000; } 
+header nav { display: flex; align-items: center; } 
+header nav a { width: 40px; height: 40px; margin-left: 30px; } 
+header nav .login-btn,header nav .wish-btn, header nav .copy-btn { padding-top: 5px; } 
+
+header .bottom-wrap { padding: 19px 0; display: flex; justify-content: space-between; } 
+header .left-area { display: flex; } 
+header .menu-btn { display: flex; flex-direction: column; justify-content: center; } 
+header .menu-btn span { width: 21px; height: 2px; background: #000; margin-bottom: 6px; } 
+header .menu-btn span:last-child { margin-bottom: 0; } 
+header .cate-tit { margin-left: 20px; font-size: 16px; line-height: 1.45; } 
+header .menu-group { margin-left: 40px; display: flex; align-items: center; font-weight: 500; } 
+header .menu-group li { margin-left: 20px; } 
+header .menu-group li a { font-size: 15px; line-height: 1.46px; color: #222; } 
+header .login-area { display: flex; } 
+header .login-area li { margin-left: 20px; } 
+header .login-area li a { font-size: 15px; line-height: 1.44; color: #767676; } 
+
+
+
+
+/*===========================================================================
+ 푸터
+============================================================================*/
+footer { background: #fff; } 
+footer .container { display: flex; justify-content: space-between; } 
+footer .top-area { padding: 17px 0; border-bottom: 1px solid #DBDBDB; } 
+footer .top-area .left-group { display: flex; justify-content: space-between; } 
+footer .top-area .left-group li a { margin-right: 40px; font-weight: 400; font-size: 15px; line-height: 1.46; letter-spacing: -0.0025em; color: #222; } 
+footer .top-area .left-group li a.active { color: #604fdf; } 
+footer .top-area .right-group { display: flex; } 
+footer .top-area .right-group span { position: relative; margin-right: 31px; font-weight: 400; font-size: 13px; line-height: 1.46; letter-spacing: -0.0025em; } 
+footer .top-area .right-group span::after { margin-left: 4px; position: absolute; top: 50%; transform: translateY(-50%); content: ''; background: url(../img/Polygon.png)no-repeat; width: 14px; height: 10px; } 
+footer .bottom-area { padding: 40px 0 61px; } 
+footer .bottom-area .left-area .company-name { font-size: 15px; font-weight: 500; line-height: 1.46; letter-spacing: -0.0025em; color: #222; } 
+footer .bottom-area .left-area .company-info { margin-top: 20px; } 
+footer .bottom-area .left-area .company-info span { position: relative; margin-right: 22px; font-size: 13px; line-height: 1.46; letter-spacing: -0.0025em; color: #505050; } 
+footer .bottom-area .left-area .company-info span::after { content: ''; position: absolute; top: 50%; transform: translateY(-50%); right: -9px; width: 1px; height: 10px; background: #DBDBDB; } 
+footer .bottom-area .left-area .company-info span:nth-child(4)::after { display: none; } 
+footer .bottom-area .left-area .company-info span:last-child::after { display: none; } 
+footer .bottom-area .left-area .copyright-wrap { margin-top: 24px; } 
+footer .bottom-area .left-area .copyright-wrap .tit { width: 100%; font-weight: 500; } 
+footer .bottom-area .left-area .copyright-wrap span { font-weight: 400; font-size: 13px; line-height: 1.46; color: #505050; } 
+footer .bottom-area .right-area .customer-num { font-weight: 500; font-size: 20px; line-height: 1.15; letter-spacing: -0.005em; color: #222222; } 
+footer .bottom-area .right-area > .txt-box { margin-top: 10px; display: flex; flex-direction: column; } 
+footer .bottom-area .right-area > .txt-box span { position: relative; margin-bottom: 6px; font-weight: 400; font-size: 12px; line-height: 1.41; color: #222222; } 
+footer .bottom-area .right-area > .txt-box span:nth-child(2)::after { margin-left: 3px; margin-top: -1px; content: ''; position: absolute; top: 50%; transform: translateY(-50%); width: 5px; height: 8px; background: url(../img/arrow-right.svg)no-repeat center / 100% auto; } 
+footer .bottom-area .right-area .smart-group { margin-top: 33px; display: flex; } 
+footer .bottom-area .right-area .smart-group .img-box { width: 52px; } 
+footer .bottom-area .right-area .smart-group span:first-child { font-weight: 500; font-size: 14px; line-height: 1.42; letter-spacing: -0.005em; color: #222222; } 
+footer .bottom-area .right-area .smart-group span:nth-child(2) { margin-top: 3px; font-weight: 400; font-size: 12px; line-height: 1.41; letter-spacing: -0.005em; color: #505050; } 
