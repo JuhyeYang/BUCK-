@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100; 300; 400; 500; 700; 900&family=Roboto:ital,wght@0,100; 0,300; 0,400; 0,500; 0,700; 0,900; 1,100; 1,300; 1,400; 1,500; 1,700; 1,900&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300; 0,400; 0,500; 0,600; 0,700; 0,800; 1,300; 1,400; 1,500; 1,600; 1,700; 1,800&display=swap'); /*===========================================================================
- CSS 초기화
+
+
+/*===========================================================================
+ css초기화
 ============================================================================*/
 * { font-family: 'Roboto','Noto Sans KR',sans-serif; box-sizing: border-box; margin: 0; padding: 0; font-weight: 400; } 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, em, img, strong, b, i, dl, dt, dd, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, menu, nav, section, video, a { border: 0; outline: 0; font-size: 16px; color: #191919; line-height: 1.5; scroll-behavior: smooth; letter-spacing: -0.6px; } 
@@ -19,10 +22,10 @@ p { line-height: 1.5; }
 img { display: block; width: 100%; object-fit: cover; } 
 span { display: inline-block; } 
 label { display: block; font-size: 18px; } 
-button { cursor: pointer; background: #1A274C; color: #fff; font-size:15px; padding:12px 20px; } 
+button { cursor: pointer; background: none; border: none; font-size:16px; } 
 a { display: block; text-decoration: none; } 
-input[type="text"], input[type="password"], input[type="email"], button, textarea { border: 1px solid #e1e1e1; appearance: none; -moz-appearance: none; -webkit-appearance: none; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; } 
-input[type="text"], input[type="password"], input[type="email"], input[type="tel"] { border:0; border-bottom: 1px solid #e3e3e5; background: inherit; padding:12px 30px 12px 0; } 
+input[type="text"], input[type="password"], input[type="email"], button, textarea { appearance: none; -moz-appearance: none; -webkit-appearance: none; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; } 
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"] { border:0; border-bottom: 1px solid #dbdbdb; background: inherit; padding:12px 30px 12px 0; } 
 input::placeholder { font-weight: 400; color:#767676; } 
 textarea { resize: none; padding: 14px; font-size: 16px; } 
 .col-group { display: flex; align-items: center; } 
@@ -30,27 +33,28 @@ textarea { resize: none; padding: 14px; font-size: 16px; }
 .btn-group button { font-size: 14px; font-weight: 400; position: relative; margin: 0 auto; padding: 0; width: 144px; border: 1px solid #d3d3d3; text-align: center; height: 50px; line-height: 50px; } 
 pre { display: inline-block; white-space: pre-wrap; } 
 .wrap { overflow: hidden; } 
+
 /*===========================================================================
  공통요소
 ============================================================================*/
-.container { width: 1280px; height: 100%; margin: 0 auto; } 
+.container { width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; } 
 .button-group { width: 100%; display: flex; align-items: center; justify-content: center; } 
 
 /*===========================================================================
  헤더
 ============================================================================*/
-header { position: fixed; top: 0; left: 0; width: 100%;  background: #fff; } 
-header .logo { margin-right: 72px; padding-top: 5px; font-weight: 700; font-size: 24px; line-height: 1.45; } 
-header .container { display: flex; justify-content: space-between; flex-wrap: wrap; } 
+header { position: fixed; top: 0; left: 0; width: 100%; background: #fff; } 
+header .logo { margin-right: 72px; padding-top: 5px; } 
+header .logo a { font-weight: 700; font-size: 24px; line-height: 1.45; } 
 header .top-wrap { padding: 23px 0; display: flex; justify-content: space-between; width: 100%; border-bottom: 1px solid #d4d4d4; } 
 header .top-wrap .left-group { display: flex; } 
-header .input-box { width: 420px; display: flex; align-items: center; } 
-header .input-box input { position: relative; width: 100%; padding-left: 20px; border-radius: 22px; background: #F1F1F5; font-weight: 400; font-size: 15px; line-height: 1.46; letter-spacing: -0.0025em; } 
-header .input-box input::after { content: ''; position: absolute; background: url(../img/icon-search.svg)no-repeat center / 100% auto; width: 20px; height: 18px; border: 1px solid #000; } 
+header .input-box { position: relative; width: 420px; display: flex; align-items: center; } 
+header .input-box input { width: 100%; padding-left: 20px; border-radius: 22px; background: #F1F1F5; font-weight: 400; font-size: 15px; line-height: 1.46; letter-spacing: -0.0025em; } 
+header .input-box a { content: ''; position: absolute; right: 20px; background: url(../img/icon-search.svg)no-repeat center / 100% auto; width: 20px; height: 18px; } 
 header nav { display: flex; align-items: center; } 
-header nav a { width: 40px; height: 40px; margin-left: 30px; } 
+header nav a { position: relative; width: 40px; height: 40px; margin-left: 30px; } 
 header nav .login-btn,header nav .wish-btn, header nav .copy-btn { padding-top: 5px; } 
-
+header nav .cart-btn span { position: absolute; top: 0; right: -3px;  width: 18px; height: 18px; padding-top: 1px; border-radius: 50%; background: #000; text-align: center; font-weight: 400; font-size: 11px; line-height: 1.45; letter-spacing: -0.0025em; color: #FFFFFF; } 
 header .bottom-wrap { padding: 19px 0; display: flex; justify-content: space-between; } 
 header .left-area { display: flex; } 
 header .menu-btn { display: flex; flex-direction: column; justify-content: center; } 
@@ -65,13 +69,70 @@ header .login-area li { margin-left: 20px; }
 header .login-area li a { font-size: 15px; line-height: 1.44; color: #767676; } 
 
 
+/*===========================================================================
+로그인영역
+============================================================================*/
+main { background: #eee; height: 2000px; } 
+.login-wrap { position: absolute; top: 200px; left: 50%; transform: translateX(-50%); width: 496px; padding: 40px 48px 39px; background: #fff; margin: 0 auto; } 
+.login-wrap h2 { font-weight: 500; font-size: 28px; line-height: 1.46; letter-spacing: -0.0025em; color: #000; text-align: center; } 
+.login-wrap ul { margin-top: 64px; } 
+.login-wrap li { position: relative; display: flex; justify-content: space-between; width: 400px; margin: 0 0 20px; } 
+.login-wrap li input { position: relative; width: 100%; height: 56px; } 
+.login-wrap li input::placeholder { font-weight: 400; font-size: 16px; line-height: 1.43; letter-spacing: -0.0025em; color: #767676; } 
+.login-wrap li:nth-child(2) input::after { position: absolute; right: 0; display: inline-block; content: ''; width: 26px; height: 40px; border: 1px solid #000; background: url(../img/View.svg)no-repeat center / 100% auto; } 
+.login-wrap li input[type="checkbox"] { position: absolute; left: -3000%; } 
+.login-wrap li input[type="checkbox"] + label { font-weight: 400; font-size: 15px; line-height: 22px; letter-spacing: -0.0025em; color: #222222; } 
+.login-wrap li input[type="checkbox"] + label::before { margin-right: 10px; display: inline-block; content: ''; width: 24px; height: 24px; border-radius: 50%; border: 1px solid #DBDBDB; vertical-align: middle; } 
+.login-wrap li input[type="checkbox"]:checked + label::before { background: url(../img/ico-check.png)no-repeat #767676 center / 100% auto; } 
+.login-wrap li:nth-child(3) a { display: inline-block; font-weight: 400; font-size: 15px; line-height: 22px; letter-spacing: -0.0025em; color: #767676; } 
+.login-wrap li button { width: 100%; height: 56px; color: #fff; background: #604FDF; } 
+.login-wrap li:nth-child(5) { justify-content: center; margin-bottom: 0; } 
+.login-wrap li .view-btn { position: absolute; content: ''; top: 50%; transform: translateY(-50%); right: 0; width: 26px; height: 20px; background: url(../img/View.svg)no-repeat center / 100% auto; } 
+.login-wrap .sns-wrap { margin-top: 40px; }
+.login-wrap .sns-group {  text-align: center; } 
+.login-wrap .sns-group h3 { font-weight: 400; font-size: 15px; line-height: 22px; letter-spacing: -0.0025em; color: #767676; } 
+.login-wrap .sns-group .img-box { margin-top: 20px; display: flex; justify-content: center; } 
+.login-wrap .sns-group a { width: 48px; height: 48px; margin-right: 20px; border-radius: 50%; border: 1px solid #DBDBDB; } 
+.login-wrap .sns-group a:first-child { background: url(../img/ico-kakao.svg)no-repeat center; } 
+.login-wrap .sns-group a:nth-child(2) { background: url(../img/ico-naver.svg)no-repeat center; } 
+.login-wrap .sns-group a:nth-child(3) { background: url(../img/ico-google.svg)no-repeat center; } 
+.login-wrap .sns-group a:last-child { background: url(../img/ico-apple.svg)no-repeat center; margin-right: 0; } 
+.login-wrap .register-btn { width: 100%; height: 56px; padding-top: 16px; margin-top: 40px; border: 1px solid #DBDBDB; text-align: center; font-weight: 500; font-size: 16px; line-height: 23px; letter-spacing: -0.0025em; color: #222222; } 
+.login-wrap .bottom { margin-top: 53px; display: flex; justify-content: center; align-items: center; } 
+.login-wrap .bottom span { font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: -0.0025em; color: #767676; } 
+.login-wrap .bottom span:nth-child(2) { color: #222; } 
+.login-wrap .bottom .img-box { width: 6px; margin-left: 4px; } 
 
+/*===========================================================================
+회원가입영역
+============================================================================*/
+main { background: #eee; height: 2000px; } 
+.register-wrap { position: absolute; top: 200px; left: 50%; transform: translateX(-50%); width: 496px; padding: 40px 48px 21px; background: #fff; } 
+.register-wrap h2 { font-weight: 500; font-size: 28px; line-height: 1.46; letter-spacing: -0.0025em; color: #000; text-align: center; } 
+.register-wrap ul { margin-top: 64px; } 
+.register-wrap li { position: relative; margin-bottom: 20px; } 
+.register-wrap li:nth-child(6),.register-wrap li:nth-child(7) { margin-bottom: 40px; } 
+.register-wrap li input { width: 100%; height: 56px; padding-right: 26px; } 
+.register-wrap li input::placeholder { font-weight: 400; font-size: 16px; line-height: 1.43; letter-spacing: -0.0025em; color: #767676; } 
+.register-wrap li label { margin-bottom: 4px; font-weight: 400; font-size: 15px; line-height: 22px; letter-spacing: -0.0025em; color: #767676; } 
+.register-wrap li > div { position: relative; display: flex; justify-content: center; } 
+.register-wrap li .view-btn { position: absolute; content: ''; top: 50%; transform: translateY(-50%); right: 0; width: 26px; height: 20px; background: url(../img/View.svg)no-repeat center / 100% auto; } 
+.register-wrap li .num-transfer-btn { padding: 12px 20px; background: #DBDBDB; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: -0.0025em; color: #222222; } 
+.register-wrap li .num-transfer-btn { position: absolute; right: 0; bottom: 0; } 
+.register-wrap .radio-group { display: flex; flex-direction: column; } 
+.register-wrap .radio { position: relative; width: 100%; height: 24px; padding-left: 34px; margin-top: 10px; display: flex; align-items: center; } 
+.register-wrap .radio input[type="radio"] { position: absolute; opacity: 0; } 
+.register-wrap .radio span::before { display: inline-block; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 24px; height: 24px; content: ''; border-radius: 50%; border: 1px solid #dbdbdb; } 
+.register-wrap .radio span::after { position: absolute; left: 13px; top: 50%; transform: translate(-50%, -50%); content:''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; } 
+.register-wrap .radio input:checked + span::before { border-color: #604fdf; } 
+.register-wrap .radio input:checked + span::after { background: #604fdf; } 
+.register-wrap .radio button { position: absolute; right: 0; } 
+.register-wrap .register-btn { width: 100%; height: 56px; color: #fff; background: #604FDF; } 
 
 /*===========================================================================
  푸터
 ============================================================================*/
 footer { background: #fff; } 
-footer .container { display: flex; justify-content: space-between; } 
 footer .top-area { padding: 17px 0; border-bottom: 1px solid #DBDBDB; } 
 footer .top-area .left-group { display: flex; justify-content: space-between; } 
 footer .top-area .left-group li a { margin-right: 40px; font-weight: 400; font-size: 15px; line-height: 1.46; letter-spacing: -0.0025em; color: #222; } 
@@ -80,20 +141,26 @@ footer .top-area .right-group { display: flex; }
 footer .top-area .right-group span { position: relative; margin-right: 31px; font-weight: 400; font-size: 13px; line-height: 1.46; letter-spacing: -0.0025em; } 
 footer .top-area .right-group span::after { margin-left: 4px; position: absolute; top: 50%; transform: translateY(-50%); content: ''; background: url(../img/Polygon.png)no-repeat; width: 14px; height: 10px; } 
 footer .bottom-area { padding: 40px 0 61px; } 
+footer .bottom-area .container { position: relative; } 
 footer .bottom-area .left-area .company-name { font-size: 15px; font-weight: 500; line-height: 1.46; letter-spacing: -0.0025em; color: #222; } 
 footer .bottom-area .left-area .company-info { margin-top: 20px; } 
-footer .bottom-area .left-area .company-info span { position: relative; margin-right: 22px; font-size: 13px; line-height: 1.46; letter-spacing: -0.0025em; color: #505050; } 
-footer .bottom-area .left-area .company-info span::after { content: ''; position: absolute; top: 50%; transform: translateY(-50%); right: -9px; width: 1px; height: 10px; background: #DBDBDB; } 
+footer .bottom-area .left-area .company-info div { margin-bottom: 10px; } 
+footer .bottom-area .left-area .company-info:last-child { margin-bottom: 0; } 
+footer .bottom-area .left-area .company-info span { position: relative; margin-right: 20px; font-size: 13px; line-height: 1.46; letter-spacing: -0.0025em; color: #505050; } 
+footer .bottom-area .left-area .company-info span::after { content: ''; position: absolute; top: 50%; transform: translateY(-50%); right: -10px; width: 1px; height: 10px; background: #DBDBDB; } 
 footer .bottom-area .left-area .company-info span:nth-child(4)::after { display: none; } 
 footer .bottom-area .left-area .company-info span:last-child::after { display: none; } 
-footer .bottom-area .left-area .copyright-wrap { margin-top: 24px; } 
+footer .bottom-area .left-area .copyright-wrap { margin-top: 24px; display: flex; flex-direction: column; } 
 footer .bottom-area .left-area .copyright-wrap .tit { width: 100%; font-weight: 500; } 
-footer .bottom-area .left-area .copyright-wrap span { font-weight: 400; font-size: 13px; line-height: 1.46; color: #505050; } 
+footer .bottom-area .left-area .copyright-wrap span { margin-bottom: 4px; font-weight: 400; font-size: 13px; line-height: 1.46; color: #505050; } 
+footer .bottom-area .left-area .copyright-wrap span:last-child { margin-bottom: 0; } 
+footer .bottom-area .right-area { position: absolute; right: 0px; } 
 footer .bottom-area .right-area .customer-num { font-weight: 500; font-size: 20px; line-height: 1.15; letter-spacing: -0.005em; color: #222222; } 
 footer .bottom-area .right-area > .txt-box { margin-top: 10px; display: flex; flex-direction: column; } 
 footer .bottom-area .right-area > .txt-box span { position: relative; margin-bottom: 6px; font-weight: 400; font-size: 12px; line-height: 1.41; color: #222222; } 
 footer .bottom-area .right-area > .txt-box span:nth-child(2)::after { margin-left: 3px; margin-top: -1px; content: ''; position: absolute; top: 50%; transform: translateY(-50%); width: 5px; height: 8px; background: url(../img/arrow-right.svg)no-repeat center / 100% auto; } 
 footer .bottom-area .right-area .smart-group { margin-top: 33px; display: flex; } 
 footer .bottom-area .right-area .smart-group .img-box { width: 52px; } 
+footer .bottom-area .right-area .smart-group .txt-box { display: flex; flex-direction: column; } 
 footer .bottom-area .right-area .smart-group span:first-child { font-weight: 500; font-size: 14px; line-height: 1.42; letter-spacing: -0.005em; color: #222222; } 
 footer .bottom-area .right-area .smart-group span:nth-child(2) { margin-top: 3px; font-weight: 400; font-size: 12px; line-height: 1.41; letter-spacing: -0.005em; color: #505050; } 
