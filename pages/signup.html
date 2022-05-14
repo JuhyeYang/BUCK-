@@ -28,6 +28,7 @@
                         </a>
                         <a href="" class="cart-btn">
                             <img src="../img/icon-cart.svg" alt="">
+                            <span>3</span>
                         </a>
                         <a href="" class="wish-btn">
                             <img src="../img/icon-wish.svg" alt="">
@@ -89,61 +90,60 @@
 
             </div>
         </header>
-
         <!-- 메인 -->
-        <main class="register-wrap login-wrap">
-            <form class="login-group">
-                <h2 class="">로그인</h2>
-                <ul>
-                    <li><input type="text" placeholder="아이디를 입력해주세요." title="아이디입력"></li>
-                    <li class="password-group">
-                        <input type="password" placeholder="비밀번호를 입력해주세요." title="비밀번호입력">
-                        <span>비밀번호가 일치하지 않습니다</span>
-                        <a href="" class="view-btn"></a>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="login">
-                        <label for="login">
-                            <span>로그인 상태유지</span>                                
-                        </label>
-                        <a href="">아이디/비밀번호</a>
-                    </li>
-                    <li>
-                        <button>로그인하기</button>
-                    </li>
-                    <li class="sns-wrap">
-                        <div class="sns-group">
-                            <h3>SNS로그인</h3>
-                            <div class="img-box">
-                                <a href="" class="kakao">
-                                    <img src="../img/ico-kakao.svg" alt="">
-                                </a>
-                                <a href="" class="naver">
-                                    <img src="../img/ico-naver.svg" alt="">
-                                </a>
-                                <a href="" class="google">
-                                    <img src="../img/ico-google.svg" alt="">
-                                </a>
-                                <a href="" class="apple">
-                                    <img src="../img/ico-apple.svg" alt="">
-                                </a>
+        <main class="register-wrap signup-wrap">
+            <section class="signup-group">
+                <form action="">
+                    <h2>회원가입</h2>
+                    <ul>
+                        <li>
+                            <label for="loginid">* 아이디</label>
+                            <input type="text" placeholder="아이디(이메일 주소)" id="loginid">
+                        </li>
+                        <li>
+                            <label for="">* 비밀번호</label>
+                            <div>
+                                <input type="password" placeholder="비밀번호" id="">
+                                <a href="" class="view-btn"></a>
                             </div>
-                        </div>
-                    </li>
-                    <li class="register-btn-box">
-                        <a class="register-btn">회원가입</a>
-                    </li>
-                </ul>
-                <a href="" class="bottom">
-                    <span>회원이 아니신가요?</span>
-                    <span>비회원 주문조회</span>
-                    <div class="img-box">
-                        <img src="../img/right-arrow.svg" alt="">
-                    </div>
-                </a>
-            </form>
+                        </li>
+                        <li>
+                            <input type="password" placeholder="비밀번호 재입력" title="비밀번호재입력">
+                            <a href="" class="view-btn"></a>
+                        <li>
+                            <label for="name">* 이름</label>
+                            <input type="text" placeholder="이름(실명)" id="name">
+                            <button class="num-transfer-btn">인증번호 전송</button>
+                        </li>
+                        <li>
+                            <input type="text" placeholder="인증번호 입력">
+                        </li>
+                        <li>
+                            <div class="radio-group">
+                                <label class="radio">
+                                    <input type="radio" name="info">                                    
+                                    <span>이용약관 동의</span>
+                                    <button><img src="../img/right-arrow-bk.svg" alt=""></button>
+                                </label>
+                                <label class="radio">                                    
+                                    <input type="radio" name="info">
+                                    <span>개인정보 취급방침 동의</span>
+                                    <button><img src="../img/right-arrow-bk.svg" alt=""></button>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="info">
+                                    <span>마케팅 정보 수신 동의</span>
+                                    <button><img src="../img/right-arrow-bk.svg" alt=""></button>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="register-btn-box">
+                            <button class="signup-btn register-btn">회원가입</button>
+                        </li>
+                    </ul>
+                </form>
+            </section>
         </main>
-
         <!-- 푸터 -->
         <footer>
             <div class="top-area">

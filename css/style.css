@@ -1,0 +1,103 @@
+/*===========================================================================
+register
+============================================================================*/
+main { margin-top: 155px; background: #eee; } 
+.register-wrap input[type="text"],.register-wrap input[type="password"] { border-bottom: 1px solid #dbdbdb; } 
+.register-wrap { padding: 85px 0 170px; } 
+.register-wrap .register-group { margin: 0 auto; } 
+.register-wrap h2 { font-weight: 500; font-size: 28px; line-height: 1.46; letter-spacing: -0.0025em; color: #000; text-align: center; } 
+.register-wrap span, .register-wrap p { font-weight: 400; font-size: 16px; line-height: 1.43; text-align: center; letter-spacing: -0.0025em; color: #767676; } 
+.register-wrap .radio label { position: relative; } 
+.register-wrap .radio input[type="radio"] { position: absolute; opacity: 0; } 
+.register-wrap .radio span::before { display: inline-block; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 24px; height: 24px; content: ''; border-radius: 50%; border: 1px solid #dbdbdb; } 
+.register-wrap .radio span::after { position: absolute; left: 13px; top: 50%; transform: translate(-50%, -50%); content:''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; } 
+.register-wrap .radio input:checked + span::before { border-color: #604fdf; } 
+.register-wrap .radio input:checked + span::after { background: #604fdf; } 
+.register-wrap input[type="text"],.register-wrap input[type="password"],.register-wrap input[type="tel"] { border-bottom: 1px solid #dbdbdb; position: relative; width: 100%; height: 56px; } 
+.register-wrap input[type="text"]::placeholder,.register-wrap input[type="password"]::placeholder,.register-wrap input[type="tel"] { font-weight: 400; font-size: 16px; line-height: 1.43; letter-spacing: -0.0025em; color: #767676; } 
+.register-btn-box { height: 56px; display: flex; justify-content: center; } 
+.register-btn { font-weight: 500; font-size: 16px; line-height: 1.43; letter-spacing: -0.0025em; } 
+
+
+
+
+/* 로그인영역 */
+.login-group { width: 496px; padding: 40px 48px 39px; background: #fff; margin: 0 auto; } 
+.login-wrap ul { margin-top: 64px; } 
+.login-wrap li { position: relative; display: flex; justify-content: space-between; width: 400px; margin: 0 0 20px; } 
+.login-wrap li:nth-child(2) input::after { position: absolute; right: 0; display: inline-block; content: ''; width: 26px; height: 40px; border: 1px solid #000; background: url(../img/View.svg)no-repeat center / 100% auto; } 
+.login-wrap input[type="checkbox"] { position: absolute; left: -3000%; } 
+.login-wrap input[type="checkbox"] + label { position: relative; font-weight: 400; font-size: 15px; line-height: 22px; letter-spacing: -0.0025em; color: #222222; } 
+.login-wrap input[type="checkbox"] + label::before { margin-right: 10px; display: inline-block; content: ''; width: 24px; height: 24px; border-radius: 50%; border: 1px solid #DBDBDB; vertical-align: middle; } 
+.login-wrap input[type="checkbox"]:checked + label::after { position: absolute; top: 50%; transform: translateY(-50%); left: 7px; z-index: 100; content: ''; width: 12px; height: 12px; background: #604FDF; border-radius: 50%; } 
+.login-wrap input[type="checkbox"]:checked + label::before { border: 1px solid #604FDF; } 
+.login-wrap li:nth-child(3) { margin-bottom: 0; } 
+.login-wrap li:nth-child(3) a { display: inline-block; font-weight: 400; font-size: 15px; line-height: 22px; letter-spacing: -0.0025em; color: #767676; } 
+.login-wrap li button { margin-top: 40px; width: 100%; height: 56px; color: #fff; background: #604FDF; } 
+.login-wrap li:nth-child(5) { justify-content: center; margin-bottom: 0; } 
+.login-wrap li .view-btn { position: absolute; content: ''; top: 50%; transform: translateY(-50%); right: 0; width: 26px; height: 20px; background: url(../img/View.svg)no-repeat center / 100% auto; } 
+.login-wrap .password-group { flex-direction: column; } 
+.register-wrap input[type="password"].wrong-active { border-bottom: 1px solid red; } 
+.login-wrap .password-group span { display: none; text-align: left; width: 100%; margin-top: 3px; font-weight: 400; font-size: 13px; line-height: 19px; letter-spacing: -0.0025em; color: #ED1C24; } 
+.login-wrap .sns-wrap { margin-top: 40px; } 
+.login-wrap .sns-group { text-align: center; } 
+.login-wrap .sns-group h3 { font-weight: 400; font-size: 15px; line-height: 22px; letter-spacing: -0.0025em; color: #767676; } 
+.login-wrap .sns-group .img-box { margin-top: 20px; display: flex; justify-content: center; } 
+.login-wrap .sns-group a { display: flex; justify-content: center; align-items: center; width: 48px; height: 48px; margin-right: 20px; border-radius: 50%; border: 1px solid #DBDBDB; } 
+.login-wrap .sns-group a img { width: auto; } 
+.login-wrap .sns-group a:nth-child(2) { background: url(../img/ico-naver.svg)no-repeat center; } 
+.login-wrap .sns-group a:nth-child(3) { background: url(../img/ico-google.svg)no-repeat center; } 
+.login-wrap .sns-group a:last-child { background: url(../img/ico-apple.svg)no-repeat center; margin-right: 0; } 
+.login-wrap .register-btn { width: 100%; height: 56px; padding-top: 16px; margin-top: 40px; border: 1px solid #DBDBDB; text-align: center; color: #222222; } 
+.login-wrap .bottom { margin-top: 53px; display: flex; justify-content: center; align-items: center; } 
+.login-wrap .bottom span { font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: -0.0025em; color: #767676; } 
+.login-wrap .bottom span:nth-child(2) { color: #222; } 
+.login-wrap .bottom .img-box { width: 6px; margin-left: 4px; } 
+
+
+/* 회원가입 영역 */
+.signup-group { width: 496px; padding: 40px 48px 21px; background: #fff; margin: 0 auto; } 
+.signup-wrap ul { margin-top: 64px; } 
+.signup-wrap li { position: relative; margin-bottom: 20px; } 
+.signup-wrap li:nth-child(6),.signup-wrap li:nth-child(7) { margin-bottom: 40px; } 
+.signup-wrap li label { margin-bottom: 4px; font-weight: 400; font-size: 15px; line-height: 22px; letter-spacing: -0.0025em; color: #767676; } 
+.signup-wrap li > div { position: relative; display: flex; justify-content: center; } 
+.signup-wrap li .view-btn { position: absolute; content: ''; top: 50%; transform: translateY(-50%); right: 0; width: 26px; height: 20px; background: url(../img/View.svg)no-repeat center / 100% auto; } 
+.signup-wrap li .num-transfer-btn { position: absolute; right: 0; bottom: 0; padding: 12px 20px; background: #DBDBDB; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: -0.0025em; color: #222222; } 
+.signup-wrap .radio-group { display: flex; flex-direction: column; } 
+.signup-wrap .radio { position: relative; width: 100%; height: 24px; padding-left: 34px; margin-top: 10px; display: flex; align-items: center; } 
+.signup-wrap .radio input[type="radio"] { position: absolute; opacity: 0; } 
+.signup-wrap .radio span::before { display: inline-block; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 24px; height: 24px; content: ''; border-radius: 50%; border: 1px solid #dbdbdb; } 
+.signup-wrap .radio span::after { position: absolute; left: 13px; top: 50%; transform: translate(-50%, -50%); content:''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; } 
+.signup-wrap .radio input:checked + span::before { border-color: #604fdf; } 
+.signup-wrap .radio input:checked + span::after { background: #604fdf; } 
+.signup-wrap .radio button { position: absolute; right: 0; } 
+.signup-wrap .signup-btn { width: 100%; height: 56px; color: #fff; background: #604FDF; } 
+
+/* 계정찾기 영역 */
+.find-group { width: 496px; padding: 40px 46px 102px; text-align: center; background: #fff; } 
+.find-wrap ul { margin-top: 75px; } 
+.find-wrap li { width: 100%; display: flex; justify-content: center; margin-bottom: 39px; } 
+.find-wrap li:first-child span { width: 100%; padding-bottom: 18px; border-bottom: 1px solid #dbdbdb; } 
+.find-wrap li span.active { color: #222; border-bottom: 1px solid #000; } 
+.find-wrap li:nth-child(2) { flex-direction: column; margin-bottom: 30px; } 
+.find-wrap li p { color: #222; } 
+.find-wrap li:nth-child(3) { margin-bottom: 30px; background: #F8F8FA; } 
+.find-wrap .radio-group { height: 84px; display: flex; justify-content: center; } 
+.find-wrap .radio-group label { display: flex; align-items: center; margin-right: 21px; display: flex; justify-content: center; align-items: center; } 
+.find-wrap .radio-group label:last-child { margin-right: 0; } 
+.find-wrap .radio-group span { position: relative; padding-left: 34px; font-size: 15px; line-height: 1.46; color: #222222; } 
+
+
+.find-wrap li:nth-child(4) { margin-bottom: 37px; } 
+.find-wrap .register-btn-box { background: #604fdf; margin-bottom: 0; } 
+.find-wrap .register-btn-box a { padding-top: 16px; color: #fff; } 
+.find-wrap .input-box { display: flex; flex-direction: column; } 
+.find-wrap .input-box.email-active { display: none; } 
+.find-wrap .find-pwd-by-email { width: 100%; display: flex; flex-direction: column; margin-top: 39px; text-align: center; } 
+.find-wrap .find-pwd-by-email h3 { font-weight: 400; font-size: 18px; line-height: 1.45; text-align: center; letter-spacing: -0.0025em; color: #222222; } 
+.find-wrap .find-pwd-by-email p { margin-top: 20px; font-weight: 400; font-size: 15px; line-height: 1.46; text-align: center; letter-spacing: -0.0025em; color: #222222; } 
+.find-wrap .find-pwd-by-email .txt-box { margin-top: 20px; } 
+.find-wrap .find-pwd-by-email .txt-box span { font-weight: 500; font-size: 15px; line-height: 22px; text-align: center; letter-spacing: -0.0025em; color: #767676; } 
+.find-wrap .find-pwd-by-email .txt-box span:last-child { font-weight: 400; }
+.find-by-email-group { padding-bottom: 40px; }

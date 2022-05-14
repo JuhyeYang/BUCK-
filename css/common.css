@@ -17,15 +17,15 @@ table tr { }
 table th { font-size:18px; font-weight: bold; padding:12px; text-align: center; } 
 table td { padding:12px; text-align: center; } 
 input,
-select { vertical-align: middle; outline: 0; } 
+select { vertical-align: middle; outline: 0; font-size: 16px;} 
 p { line-height: 1.5; } 
 img { display: block; width: 100%; object-fit: cover; } 
 span { display: inline-block; } 
 label { display: block; font-size: 18px; } 
-button { cursor: pointer; background: none; border: none; font-size:16px; } 
+button { cursor: pointer; background: none; border: none; font-size:16px; font-weight: 500; line-height: 23px; letter-spacing: -0.0025em; } 
 a { display: block; text-decoration: none; } 
 input[type="text"], input[type="password"], input[type="email"], button, textarea { appearance: none; -moz-appearance: none; -webkit-appearance: none; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; } 
-input[type="text"], input[type="password"], input[type="email"], input[type="tel"] { border:0; border-bottom: 1px solid #dbdbdb; background: inherit; padding:12px 30px 12px 0; } 
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"] { border-bottom: 1px solid #dbdbdb;  border:0;  background: inherit; padding:12px 30px 12px 0; } 
 input::placeholder { font-weight: 400; color:#767676; } 
 textarea { resize: none; padding: 14px; font-size: 16px; } 
 .col-group { display: flex; align-items: center; } 
@@ -43,7 +43,7 @@ pre { display: inline-block; white-space: pre-wrap; }
 /*===========================================================================
  헤더
 ============================================================================*/
-header { position: fixed; top: 0; left: 0; width: 100%; background: #fff; } 
+header { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; background: #fff; } 
 header .logo { margin-right: 72px; padding-top: 5px; } 
 header .logo a { font-weight: 700; font-size: 24px; line-height: 1.45; } 
 header .top-wrap { padding: 23px 0; display: flex; justify-content: space-between; width: 100%; border-bottom: 1px solid #d4d4d4; } 
@@ -63,71 +63,11 @@ header .menu-btn span:last-child { margin-bottom: 0; }
 header .cate-tit { margin-left: 20px; font-size: 16px; line-height: 1.45; } 
 header .menu-group { margin-left: 40px; display: flex; align-items: center; font-weight: 500; } 
 header .menu-group li { margin-left: 20px; } 
-header .menu-group li a { font-size: 15px; line-height: 1.46px; color: #222; } 
+header .menu-group li a { font-size: 15px; line-height: 1.46; color: #222; } 
 header .login-area { display: flex; } 
 header .login-area li { margin-left: 20px; } 
 header .login-area li a { font-size: 15px; line-height: 1.44; color: #767676; } 
 
-
-/*===========================================================================
-로그인영역
-============================================================================*/
-main { background: #eee; height: 2000px; } 
-.login-wrap { position: absolute; top: 200px; left: 50%; transform: translateX(-50%); width: 496px; padding: 40px 48px 39px; background: #fff; margin: 0 auto; } 
-.login-wrap h2 { font-weight: 500; font-size: 28px; line-height: 1.46; letter-spacing: -0.0025em; color: #000; text-align: center; } 
-.login-wrap ul { margin-top: 64px; } 
-.login-wrap li { position: relative; display: flex; justify-content: space-between; width: 400px; margin: 0 0 20px; } 
-.login-wrap li input { position: relative; width: 100%; height: 56px; } 
-.login-wrap li input::placeholder { font-weight: 400; font-size: 16px; line-height: 1.43; letter-spacing: -0.0025em; color: #767676; } 
-.login-wrap li:nth-child(2) input::after { position: absolute; right: 0; display: inline-block; content: ''; width: 26px; height: 40px; border: 1px solid #000; background: url(../img/View.svg)no-repeat center / 100% auto; } 
-.login-wrap li input[type="checkbox"] { position: absolute; left: -3000%; } 
-.login-wrap li input[type="checkbox"] + label { font-weight: 400; font-size: 15px; line-height: 22px; letter-spacing: -0.0025em; color: #222222; } 
-.login-wrap li input[type="checkbox"] + label::before { margin-right: 10px; display: inline-block; content: ''; width: 24px; height: 24px; border-radius: 50%; border: 1px solid #DBDBDB; vertical-align: middle; } 
-.login-wrap li input[type="checkbox"]:checked + label::before { background: url(../img/ico-check.png)no-repeat #767676 center / 100% auto; } 
-.login-wrap li:nth-child(3) a { display: inline-block; font-weight: 400; font-size: 15px; line-height: 22px; letter-spacing: -0.0025em; color: #767676; } 
-.login-wrap li button { width: 100%; height: 56px; color: #fff; background: #604FDF; } 
-.login-wrap li:nth-child(5) { justify-content: center; margin-bottom: 0; } 
-.login-wrap li .view-btn { position: absolute; content: ''; top: 50%; transform: translateY(-50%); right: 0; width: 26px; height: 20px; background: url(../img/View.svg)no-repeat center / 100% auto; } 
-.login-wrap .sns-wrap { margin-top: 40px; }
-.login-wrap .sns-group {  text-align: center; } 
-.login-wrap .sns-group h3 { font-weight: 400; font-size: 15px; line-height: 22px; letter-spacing: -0.0025em; color: #767676; } 
-.login-wrap .sns-group .img-box { margin-top: 20px; display: flex; justify-content: center; } 
-.login-wrap .sns-group a { width: 48px; height: 48px; margin-right: 20px; border-radius: 50%; border: 1px solid #DBDBDB; } 
-.login-wrap .sns-group a:first-child { background: url(../img/ico-kakao.svg)no-repeat center; } 
-.login-wrap .sns-group a:nth-child(2) { background: url(../img/ico-naver.svg)no-repeat center; } 
-.login-wrap .sns-group a:nth-child(3) { background: url(../img/ico-google.svg)no-repeat center; } 
-.login-wrap .sns-group a:last-child { background: url(../img/ico-apple.svg)no-repeat center; margin-right: 0; } 
-.login-wrap .register-btn { width: 100%; height: 56px; padding-top: 16px; margin-top: 40px; border: 1px solid #DBDBDB; text-align: center; font-weight: 500; font-size: 16px; line-height: 23px; letter-spacing: -0.0025em; color: #222222; } 
-.login-wrap .bottom { margin-top: 53px; display: flex; justify-content: center; align-items: center; } 
-.login-wrap .bottom span { font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: -0.0025em; color: #767676; } 
-.login-wrap .bottom span:nth-child(2) { color: #222; } 
-.login-wrap .bottom .img-box { width: 6px; margin-left: 4px; } 
-
-/*===========================================================================
-회원가입영역
-============================================================================*/
-main { background: #eee; height: 2000px; } 
-.register-wrap { position: absolute; top: 200px; left: 50%; transform: translateX(-50%); width: 496px; padding: 40px 48px 21px; background: #fff; } 
-.register-wrap h2 { font-weight: 500; font-size: 28px; line-height: 1.46; letter-spacing: -0.0025em; color: #000; text-align: center; } 
-.register-wrap ul { margin-top: 64px; } 
-.register-wrap li { position: relative; margin-bottom: 20px; } 
-.register-wrap li:nth-child(6),.register-wrap li:nth-child(7) { margin-bottom: 40px; } 
-.register-wrap li input { width: 100%; height: 56px; padding-right: 26px; } 
-.register-wrap li input::placeholder { font-weight: 400; font-size: 16px; line-height: 1.43; letter-spacing: -0.0025em; color: #767676; } 
-.register-wrap li label { margin-bottom: 4px; font-weight: 400; font-size: 15px; line-height: 22px; letter-spacing: -0.0025em; color: #767676; } 
-.register-wrap li > div { position: relative; display: flex; justify-content: center; } 
-.register-wrap li .view-btn { position: absolute; content: ''; top: 50%; transform: translateY(-50%); right: 0; width: 26px; height: 20px; background: url(../img/View.svg)no-repeat center / 100% auto; } 
-.register-wrap li .num-transfer-btn { padding: 12px 20px; background: #DBDBDB; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: -0.0025em; color: #222222; } 
-.register-wrap li .num-transfer-btn { position: absolute; right: 0; bottom: 0; } 
-.register-wrap .radio-group { display: flex; flex-direction: column; } 
-.register-wrap .radio { position: relative; width: 100%; height: 24px; padding-left: 34px; margin-top: 10px; display: flex; align-items: center; } 
-.register-wrap .radio input[type="radio"] { position: absolute; opacity: 0; } 
-.register-wrap .radio span::before { display: inline-block; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 24px; height: 24px; content: ''; border-radius: 50%; border: 1px solid #dbdbdb; } 
-.register-wrap .radio span::after { position: absolute; left: 13px; top: 50%; transform: translate(-50%, -50%); content:''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; } 
-.register-wrap .radio input:checked + span::before { border-color: #604fdf; } 
-.register-wrap .radio input:checked + span::after { background: #604fdf; } 
-.register-wrap .radio button { position: absolute; right: 0; } 
-.register-wrap .register-btn { width: 100%; height: 56px; color: #fff; background: #604FDF; } 
 
 /*===========================================================================
  푸터
