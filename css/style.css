@@ -79,8 +79,8 @@ main { margin-top: 155px; background: #eee; }
 .find-wrap ul { margin-top: 75px; } 
 .find-wrap li { width: 100%; display: flex; justify-content: center; margin-bottom: 39px; } 
 .find-wrap li:first-child span { width: 100%; padding-bottom: 18px; border-bottom: 1px solid #dbdbdb; } 
-.find-wrap li span.active { color: #222; border-bottom: 1px solid #000; } 
-.find-wrap li:nth-child(2) { flex-direction: column; margin-bottom: 30px; } 
+.find-wrap li span.active { color: #222; border-bottom: 2px solid #000; } 
+.find-wrap li:nth-child(2) { flex-direction: column; margin-bottom: 0; } 
 .find-wrap li p { color: #222; } 
 .find-wrap li:nth-child(3) { margin-bottom: 30px; background: #F8F8FA; } 
 .find-wrap .radio-group { height: 84px; display: flex; justify-content: center; } 
@@ -99,5 +99,19 @@ main { margin-top: 155px; background: #eee; }
 .find-wrap .find-pwd-by-email p { margin-top: 20px; font-weight: 400; font-size: 15px; line-height: 1.46; text-align: center; letter-spacing: -0.0025em; color: #222222; } 
 .find-wrap .find-pwd-by-email .txt-box { margin-top: 20px; } 
 .find-wrap .find-pwd-by-email .txt-box span { font-weight: 500; font-size: 15px; line-height: 22px; text-align: center; letter-spacing: -0.0025em; color: #767676; } 
-.find-wrap .find-pwd-by-email .txt-box span:last-child { font-weight: 400; }
-.find-by-email-group { padding-bottom: 40px; }
+.find-wrap .find-pwd-by-email .txt-box span:last-child { font-weight: 400; } 
+.find-by-email-group { padding-bottom: 40px; } 
+
+/* 비밀번호 재설정 */
+.change-pwd-wrap p { margin-top: 64px; font-weight: 400; font-size: 16px; line-height: 23px; text-align: center; letter-spacing: -0.0025em; color: #222222; } 
+.change-pwd-wrap ul { margin-top: 30px; } 
+.change-pwd-wrap li:first-child { margin-top: 0; } 
+.change-pwd-wrap li { position: relative; margin-top: 20px; } 
+.change-pwd-wrap li .view-btn { position: absolute; content: ''; top: 50%; transform: translateY(-50%); right: 0; width: 26px; height: 20px; background: url(../img/View.svg)no-repeat center / 100% auto; } 
+.change-pwd-wrap li .re-pwd-btn { margin-top: 40px; width: 100%; padding: 17px 0; text-align: center; background: #604fdf; font-weight: 500; font-size: 16px; line-height: 1.43; letter-spacing: -0.0025em; color: #FFFFFF; } 
+
+/* 비회원 주문조회  */
+.order-chk-wrap ul { margin-top: 65px; }
+.order-chk-wrap li { margin-top: 20px; }
+.order-chk-wrap li:first-child { margin-top: 0; }
+.order-chk-wrap li .re-pwd-btn { margin-top: 40px; width: 100%; padding: 17px 0; text-align: center; background: #604fdf; font-weight: 500; font-size: 16px; line-height: 1.43; letter-spacing: -0.0025em; color: #FFFFFF; } 
